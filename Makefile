@@ -36,6 +36,8 @@ fclean: clean
 	rm -f $(LIBFTNAME)
 	rm -f $(SERVER) $(CLIENT)
 
-re: fclean all
+re:
+ 	make -C . fclean
+  	make -C . all
 
 .PHONY: all clean fclean re
